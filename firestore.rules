@@ -1,0 +1,18 @@
+rules_version = '2';
+
+// Since the app uses Firebase Anonymous Auth (no email/password login),
+// these rules are what actually keeps one device's expenses private from
+// another — not the Firebase config values, which aren't secret. Deploy
+// this with `firebase deploy --only firestore:rules` (requires the
+// Firebase CLI and `firebase init` in this project first).
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /expenses/{expenseId} {
+      allow read, update, delete: if request.auth != null
+        && request.auth.uid == resource.data.userId;
+
+      allow create: if request.auth != null
+        && request.auth.uid == request.resource.data.userId;
+    }
+  }
+}

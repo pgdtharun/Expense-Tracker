@@ -1,0 +1,31 @@
+{
+  "firestore": {
+    "database": "(default)",
+    "location": "asia-south1",
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "expense-tracker-cyphlab-b1a43",
+          "appId": "1:536282505275:android:53014051296b05adedbc1e",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "expense-tracker-cyphlab-b1a43",
+          "configurations": {
+            "android": "1:536282505275:android:53014051296b05adedbc1e",
+            "ios": "1:536282505275:ios:3d90cc88aebc3263edbc1e",
+            "macos": "1:536282505275:ios:3d90cc88aebc3263edbc1e",
+            "web": "1:536282505275:web:da1c6290bccff7a8edbc1e",
+            "windows": "1:536282505275:web:f340544423ddf2aeedbc1e"
+          }
+        }
+      }
+    }
+  }
+}
